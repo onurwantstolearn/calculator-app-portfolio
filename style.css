@@ -1,0 +1,109 @@
+/* Tüm HTML öğelerinde border-box kullanarak, iç ve dış kenar boşluklarını içeride tutar. */
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* Tüm öğeler ve onların pseudo öğeleri için varsayılan boşlukları sıfırlar */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sayfanın genel ayarları */
+body {
+    align-items: center; /* Öğeleri dikey olarak hizalar */
+    background: linear-gradient(320deg, #eb92be, #ffef72, #63c94b); /* Arka plan geçişli renkler */
+    display: flex; /* Esnek düzen kullanarak öğeleri ortalar */
+    font-family: 'Dosis', sans-serif; /* Yazı tipini belirler */
+    font-display: swap; /* Daha hızlı font yüklemesi için swap kullanılır */
+    height: inherit; /* Yüksekliği tüm sayfa boyunca kaplar */
+    justify-content: center; /* Öğeleri yatay olarak ortalar */
+}
+
+/* Hesap makinesi çerçevesi */
+.wrapper {
+    backdrop-filter: blur(5.5px); /* Arka planı bulanıklaştırır */
+    -webkit-backdrop-filter: blur(5.5px); /* Safari desteği için */
+    background: rgba(255, 255, 255, 0.75); /* Şeffaf beyaz arka plan */
+    border: 1px solid rgba(255, 255, 255, 0.01); /* Hafif bir kenarlık */
+    border-radius: 16px; /* Köşeleri yuvarlatır */
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1); /* Hafif gölge efekti */
+    color: #232323; /* Yazı rengini belirler */
+    flex-basis: 400px; /* Belirli bir genişlik belirler */
+    height: 540px; /* Yükseklik */
+    padding: 20px 35px; /* İç boşluklar */
+}
+
+/* Ekran tasarımı */
+.screen {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    font-size: 35px; /* Yazı boyutu */
+    overflow: auto; /* Taşma durumunda kaydırma çubuğu */
+    padding: 20px; /* İç boşluk */
+    text-align: right; /* Metni sağa hizalar */
+    width: 326px; /* Genişlik */
+}
+
+/* Buton satırlarını hizalama */
+.calc-button-row {
+    display: flex;
+    justify-content: space-between; /* Butonları eşit dağıtır */
+    margin: 5% 0; /* Dikey boşluk ekler */
+}
+
+/* Genel buton tasarımı */
+.calc-button {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    flex-basis: 20%; /* Buton genişliği */
+    font-family: inherit;
+    font-size: 24px;
+    height: 65px;
+}
+
+/* Son butona (örneğin eşittir butonu) özel tasarım */
+.calc-button:last-child {
+    background: #d72880; /* Özel arka plan rengi */
+    color: #fff; /* Beyaz metin rengi */
+}
+
+/* Son butona hover efekti */
+.calc-button:last-child:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+/* Butonlara hover efekti */
+.calc-button:hover {
+    background-color: inherit;
+}
+
+/* Butona tıklama efekti */
+.calc-button:active {
+    background-color: #ffef78;
+}
+
+/* Çift genişlik buton */
+.double {
+    flex-basis: 47%; /* Daha büyük buton */
+}
+
+/* Üçlü genişlik buton */
+.triple {
+    flex-basis: 73%; /* Daha da büyük buton */
+}

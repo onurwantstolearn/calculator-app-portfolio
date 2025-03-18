@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Harici CSS dosyasını bağlıyoruz -->
+    <title>Calculator App</title>
+</head>
+<body>
+    
+    <div class="wrapper"> <!-- Hesap makinesi çerçevesi -->
+        <section class="screen">
+            0 <!-- Ekranda başlangıç değeri olarak "0" gösteriliyor -->
+        </section>
+
+        <section class="calc-buttons"> <!-- Tüm tuşları içeren alan -->
+            
+            <!-- İlk satır: Temizleme ve bölme işlemi -->
+            <div class="calc-button-row">
+                <button class="calc-button double"> <!-- "C" butonu, geniş olarak ayarlandı -->
+                    C
+                </button>
+                <button class="calc-button">
+                    &larr; <!-- Geri alma butonu -->
+                </button>
+                <button class="calc-button">
+                    &divide; <!-- Bölme işlemi butonu -->
+                </button>
+            </div>
+
+            <!-- İkinci satır: 7, 8, 9 ve çarpma işlemi -->
+            <div class="calc-button-row">
+                <button class="calc-button">7</button>
+                <button class="calc-button">8</button>
+                <button class="calc-button">9</button>
+                <button class="calc-button">&times;</button> <!-- Çarpma işlemi -->
+            </div>
+            
+            <!-- Üçüncü satır: 4, 5, 6 ve çıkarma işlemi -->
+            <div class="calc-button-row">
+                <button class="calc-button">4</button>
+                <button class="calc-button">5</button>
+                <button class="calc-button">6</button>
+                <button class="calc-button">&minus;</button> <!-- Çıkarma işlemi -->
+            </div>
+
+            <!-- Dördüncü satır: 1, 2, 3 ve toplama işlemi -->
+            <div class="calc-button-row">
+                <button class="calc-button">1</button>
+                <button class="calc-button">2</button>
+                <button class="calc-button">3</button>
+                <button class="calc-button">&plus;</button> <!-- Toplama işlemi -->
+            </div>
+
+            <!-- Beşinci satır: 0 ve eşittir butonları -->
+            <!-- HATA: "calc_button-row" yerine "calc-button-row" olmalı -->
+            <div class="calc-button-row"> 
+                <button class="calc-button triple">0</button> <!-- 0 butonu genişletildi -->
+                <button class="calc-button">&equals;</button> <!-- Eşittir butonu -->
+            </div>
+
+        </section>
+    </div>
+
+    <script src="script.js"></script> <!-- Harici JavaScript dosyasını bağlıyoruz -->
+</body>
+</html>
